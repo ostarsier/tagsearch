@@ -1,5 +1,6 @@
 
 ### 1.标签索引mapping
+``` 
 PUT userprofile_tags
 {
   "mappings": {
@@ -28,15 +29,17 @@ PUT userprofile_tags
     }
   }
 }
-
+``` 
 ### 2.添加document
+``` 
 PUT userprofile_tags/_doc/1
 {
     "userid" : "5",
     "userlabels" : {"tagCode1":"tagValue","tagCode2":"1"}
 }
-
+``` 
 ### 3.标签mysql元数据表
+``` 
 CREATE TABLE `userprofile_tag_metadata` (
   `id` varchar(50) NOT NULL COMMENT 'id',
   `code` varchar(50) DEFAULT NULL COMMENT '标签code',
@@ -60,3 +63,4 @@ CREATE TABLE `userprofile_tag_metadata` (
 
 INSERT INTO `userprofile_tag_metadata` VALUES ('69e48e958e892ed6aad02326d8ce131c', 'A111H001_001', '男', 1, 1, NULL, '336bd40fa83b4792f1c84d6a3cd4421b', '04cc50f4b5b04fa35ba16d8ac4f29a24/336bd40fa83b4792f1c84d6a3cd4421b', '04cc50f4b5b04fa35ba16d8ac4f29a24', NULL, '2020-08-26 16:53:39', '2020-08-26 16:53:39', 1, NULL, NULL, 2, NULL);
 INSERT INTO `userprofile_tag_metadata` VALUES ('78be6f7ba95649c95ed6df5459c38bbb', 'A121H051_001', '年龄', 1, 2, NULL, '04cc50f4b5b04fa35ba16d8ac4f29a24', '04cc50f4b5b04fa35ba16d8ac4f29a24', '04cc50f4b5b04fa35ba16d8ac4f29a24', NULL, '2020-08-26 16:53:39', '2020-08-26 16:53:39', 1, NULL, NULL, 2, NULL);
+``` 
